@@ -1,0 +1,127 @@
+.footer {
+    height: 512px;
+    margin-top: 150px;
+    color: $white-color;
+
+    &__image {
+        display: block;
+        width: 100%;
+    }
+    &__background {
+        background-color: $green-color;
+    }
+    &-links {
+        @include display(flex,row,space-between,inherit);
+        width: 1280px;
+        margin: auto;
+        padding: 60px 0px 60px 0px;
+
+        &__info {
+            @include display(flex,column,space-between,inherit);
+            width: 710px;
+            &--suscribe-heading {
+                font-size: 22px;
+                font-weight: bold;
+            }
+            &--email-input {
+                position: relative;
+            }
+            &--input {
+                @include content-size(46px,672px);
+                background-color:$dark-green-color;
+                border-radius:20px;
+                border-style:none;
+                margin:20px 0px 20px 0px;
+            }
+            &--button {
+                @include content-size(33px,190px);
+                position: absolute;
+                top: 30%;
+                left: 67%;
+                color: $dark-gray-color;
+                border-radius:18px;
+                border-style:none;
+                padding-top: 4px;
+                font-weight:bold;
+                font-size:16px;
+            }
+            &--about-us {
+                @include display(flex,row,space-between,inherit);
+                width: 640px;
+
+                &>div {
+                    @include display(flex,column,space-between,flex-start);
+                    font-size: 14px;
+
+                    &>* {
+                        margin-bottom: 15px;
+                    }
+                    &>h2 {
+                        font-size: 18px;
+                        font-weight: 1000;
+                    }
+                }
+            }
+        }
+        &__copyrights {
+            @include display(flex,row,space-between,flex-start);
+            font-size: 12px;
+
+            &>div>p:nth-child(1) {
+                font-weight: 1000;
+            }
+        }
+        &__contact {
+            @include display(flex,column,space-between,flex-start);
+            @include content-size(375px,361px);
+            background-color: $dark-green-background-color;
+            padding: 25px;
+    
+            &>div {
+                @include display(flex,row,flex-start,center);
+                font-size: 14px;
+                width: 100%;
+    
+                &>div:nth-child(1) {
+                    margin: 20px;
+                }
+                &>div:nth-child(2) {
+                    display: inline;
+                    border-bottom: 1.5px solid $light-green-border-color;
+                    padding-bottom: 20px;
+                    width: 100%;
+    
+                    &>h4 {
+                        font-size: 18px;
+                        font-weight: 1000;
+                        margin-bottom: 5px;
+                    }
+                    &>p {
+                        color: $light-gray-white-color;
+                    }
+                }
+                &:nth-child(3)>div:nth-child(2) {
+                    border: none;
+                    padding: 0px;
+                }
+                &:nth-child(4) {
+                    width: 100%;
+                    justify-content: space-between;
+                    font-size: 18px;
+
+                    &>h3 {
+                        font-size: 18px;
+                        font-weight: 1000;
+                        padding-right: 25px;
+                        border-right: 1.5px solid $light-green-border-color;
+                    }
+                }
+            }
+        }
+    }
+}
+::placeholder {
+    color: $white-color;
+    font-size: 14px;
+    padding: 20px;
+}
