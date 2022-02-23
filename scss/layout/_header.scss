@@ -1,0 +1,116 @@
+
+//----------------------------------------------
+.header {
+    box-shadow: 0 5px 0 $gray-color;
+    color: $gray-color;
+
+    &-nav {
+        @include display(flex,row,space-between,flex-start);
+        width:1125px;
+        margin: auto;
+        padding: 18.5px 0;
+    }
+    &-brand {
+        display: flex;
+        align-items: center;
+        margin: 0.52px 0;
+
+        &__name {
+            font-size: 15px;
+            font-weight: 700;
+            width: 245px;
+            margin: 0 0 5px 10px;
+        }
+    }
+    &-menu {
+        @include display(flex,column,flex-start,flex-end);
+        &__top-options {
+            @include display(flex,row,space-between,flex-start);
+            list-style: none;
+            font-size: 14px;
+
+            &>li:nth-child(1), &>li:nth-child(2) {
+                padding: 1.5px 15px 1.5px 0;
+            }
+
+            &>li:nth-child(3) {
+                padding: 1.5px 25px 1.5px 0;
+            }
+            &-sizing {
+                @include display(flex,row,space-between,baseline);
+                border-right: 1px solid $gray-color;
+                font-weight: 700;
+                padding: 0.5px 15px 0.5px 0;
+
+                &>a {
+                    padding-right: 10px;
+                }
+                &-small {
+                    font-size: 11px;
+                }
+                &-medium {
+                    font-size: 14px;
+                }
+                &-large {
+                    font-size: 16px;
+                }
+            }
+            &-colors {
+                display: flex;
+                border-right: 1px solid $gray-color;
+                padding: 2.5px 0;
+
+                &>a {
+                    display: block;
+                    @include content-size(15px,15px);
+                    border-radius: 50%;
+                }
+                &-blue {
+                    background-color: $deep-blue-color;
+                    margin-left: 15px;
+                    margin-right: 10px;
+                }
+                &-green {
+                    background-color: $pale-green-color;
+                    margin-right: 10px;
+                }
+                &-yellow {
+                    background-color: $yellow-color;
+                    margin-right: 15px;
+                }
+            }
+            &-language {
+                padding: 1px 12.5px;
+                border-right: 1px solid $gray-color ;
+                &>select {
+                    border: 0;
+                    font-size: 14px;
+                    font-family: $secondary-font  ;
+                }
+            }
+            &-search {
+                margin-left: 13px;
+            }
+        }
+        &__bottom-options {
+            @include display(flex,row,space-between,flex-start);
+            list-style: none;
+            font-size: 14px;
+            margin-top: 10px;
+            
+
+            &>li {
+                padding: 0 10px;
+                border-right: 1px solid $gray-color;
+
+                &:first-child {
+                    padding-left: 0;
+                }
+                &:last-child {
+                    padding-right: 0;
+                    border-right: none;
+                }
+            }
+        }
+    }
+}

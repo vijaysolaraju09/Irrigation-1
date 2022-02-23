@@ -1,0 +1,199 @@
+.banner {
+    position: relative;
+
+    &__details {
+        max-width: 1125px;
+        margin: auto;
+    }
+    &__tracter-image {
+        @include content-size(520px,100%);
+    }
+    &__content {
+        color:  $white-color;
+        position: absolute;
+        top: 45%;
+
+        &-primary-title {
+            display: inline-block;
+            background-color: $green-color;
+            font-size: 57px;
+            font-weight: 900;
+            line-height: 1.1;
+            padding: 0 22px;
+            margin-bottom: 5px;
+        }
+        &-secondary-title {
+            background-color: $deep-green-color;
+            font-size: 35px;
+            font-weight: 900;
+            padding: 11px 23px;
+            margin-bottom: 35px;
+        }
+        &-know-more {
+            background-color: $white-color;
+            color: $light-black;
+            font-size: 22px;
+            padding: 10px 20px;
+
+            &:hover {
+                background-color: $light-black;
+                color: $white-color;
+            }
+        }
+    }
+    &__drop-down {
+        @include display(flex,row,center,center);
+        @include content-size(78px,80px);
+        position: absolute;
+        top: 92%;
+        left: 50%;
+        background-color:  $green-color;
+
+        &-inner-rectangle {
+            @include content-size(40px,35px);
+            border: 4px solid  $white-color;
+        }
+    }
+
+}
+//---------------------------------------------------------
+
+.irrigation{
+    position: relative;
+    max-width: 1125px;
+    margin: auto;
+
+    &__info {
+        margin: 130px 0 0 60px;
+
+        &-subtitle,&-location {
+            display: inline;
+            color: $gray-color;
+            font-size: 43px;
+            font-weight: 900;
+        }
+        &-subtitle {
+            margin-left: 120px;
+        }
+        &-location {
+            margin-left: 240px;
+        }
+        &-title {
+            text-transform: uppercase;
+            font-size: 120px;
+            line-height: 100px;
+            font-weight: 900;
+            letter-spacing: -6px;
+            margin: 4px 0;
+            font-family: sans-serif;
+            background-image: url($irrigation-title);
+            -webkit-background-clip: text;
+            color: transparent;
+            background-size: cover;
+            background-position: center;
+        }
+    }
+    &__logo {
+        position: absolute;
+        right: 4%;
+        bottom: 22%;
+    }
+}
+//------------------------------------------------------
+
+.services {
+    @include display(flex,row,center,center);
+    background-image: linear-gradient( $white-color,#F0F0F0);
+
+    &-links {
+        @include display(flex,row,space-between,flex-start);
+        margin: 130px 25px 122px 0;
+        width: 900px;
+
+        &__info {
+            display: block;
+            @include display(flex,column,center,center);
+            width: 125px;
+            text-align: center;
+            color: $gray-color;
+            font-size: 16px;
+            font-weight: 900;
+
+            &-image {
+                @include content-size(75px,75px);
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+//--------------------------------------------------------
+
+.about-us {
+    position: relative;
+    margin-bottom: 84px;
+    background-color: $brown-color;
+
+    &-container {
+        display: block;
+    }
+    &-details {
+        @include display(flex,row,flex-start,center);
+        position: absolute;
+        width: 1125px;
+        margin: auto;
+        padding: 15px;
+        top: 11%;
+        left: 0;
+        right: 0;
+        
+        &__play-button {
+            position: absolute;
+            top:40%;
+            left: 46%;
+            padding: 2px;
+            border-radius: 50%;
+            border: 2px $pale-light-green-color solid;
+            background-color: transparent;
+        }
+        &__video {
+            position: relative;
+            margin-right: 85px;
+            &-container {
+                position: relative;
+            }
+            &-play {
+                @include display(flex,row,center,center);
+                padding: 23px 25px;
+                background-color: $pale-light-green-color;
+                border-radius: 50%;
+            }
+        }
+        &__description {
+            @include display(flex,column,flex-start,flex-start);
+            margin: 0 0 20px;
+            color:  $white-color;
+            width: 395px;
+    
+            &-title {
+                font-size: 36px;
+                font-weight: 900;
+                margin-bottom: 16px;
+            }
+            &-details {
+                margin-bottom: 12px;
+                line-height: 23px;
+            }
+            &-button {
+                background-color: $pale-light-green-color;
+                color: $white-color;
+                font-size: 22px;
+                padding: 10px 20px;
+
+                &:hover {
+                    background-color: $white-color;
+                    color: $pale-light-green-color;
+                }
+            }
+        }
+    }
+}
