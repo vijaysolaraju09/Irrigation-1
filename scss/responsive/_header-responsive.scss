@@ -1,0 +1,110 @@
+@media (max-width: 991px) {
+
+    .header {
+        box-shadow: 0 5px 0 $gray-color;
+        width: 100%;
+        margin: auto;
+        color: $gray-color;
+
+        &-nav {
+            @include display(flex,row,space-around,center);
+            padding: 18.5px 0;
+        }
+        &-brand {
+            display: flex;
+            align-items: center;
+
+            &__name {
+                font-size: 15px;
+                font-weight: 700;
+                width: 245px;
+                margin: 0 0 5px 10px;
+            }
+        }
+        &-menu-icon {
+            display: block;
+            font-size: 50px;
+        }
+        &-cancel-icon {
+            position: absolute;
+            right: 14%;
+            top: 9%;
+            display: none;
+            font-size: 25px;
+            color: red;
+        }
+        &-hidden-menu {
+            position: relative;
+            display: none;
+            justify-content: space-between;
+            background-color: $white-color;
+            height: 100%;
+            padding: 46px 110px;
+            font-size: 18px;
+            &>ul>li {
+                margin-bottom: 20px
+            }
+        }
+        &-menu {
+            @include display(flex,column,flex-start,flex-end);
+            display: none;
+            &__left-options {
+                list-style: none;
+
+                &-sizing {
+                    font-weight: 700;
+
+                    &>a {
+                        padding-right: 10px;
+                    }
+                    &-small {
+                        font-size: 11px;
+                    }
+                    &-medium {
+                        font-size: 14px;
+                    }
+                    &-large {
+                        font-size: 16px;
+                    }
+                }
+                &-colors {
+                    display: flex;
+                    border-right: none;
+
+                    &>a {
+                        display: block;
+                        @include content-size(15px,15px);
+                        border-radius: 50%;
+                    }
+                    &-blue {
+                        background-color: $deep-blue-color;
+                        margin-right: 10px;
+                    }
+                    &-green {
+                        background-color: $pale-green-color;
+                        margin-right: 10px;
+                    }
+                    &-yellow {
+                        background-color: $yellow-color;
+                    }
+                }
+                &-language {
+                    &>select {
+                        border: 0;
+                        font-family: $secondary-font;
+                    }
+                }
+                
+            }
+            &__right-options {
+                list-style: none;
+            }
+        }
+    }
+    main {
+        display: none;
+    }
+    footer {
+        display: none;
+    }
+}

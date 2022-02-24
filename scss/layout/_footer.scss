@@ -1,0 +1,160 @@
+.footer {
+    color: $white-color;
+
+    &__image {
+        display: block;
+        width: 100%;
+    }
+    &-container {
+        background-color: $green-color;
+    }
+    &-content {
+        @include display(flex,row,space-between,inherit);
+        width: 1125px;
+        margin: auto;
+        padding-bottom: 36px;
+    }
+    &-left-section {
+        @include display(flex,column,space-between,inherit);
+        flex-wrap: wrap;
+        min-width: 741px;
+        padding-top: 55px;
+    }
+    &-about-us {
+        width: 672px;
+        margin-bottom: 67px;
+    }     
+    &-subscribe {
+        position: relative;
+
+        &-heading {
+            display: block;
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+    
+        &-input {
+            background-color:$dark-green-color;
+            border-radius:30px;
+            border-style:none;
+            color: $white-color;
+            font-size: 14px;
+            width: 672px;
+            padding: 15px 210px 14px 19px;
+            margin-bottom: 22px;
+            &:focus {
+                border-style: none;
+            }
+            &::placeholder {
+                color: $white-color;
+                font-size: 14px;
+            }
+        }
+        &-button {
+            position: absolute;
+            text-align: center;
+            top: 43%;
+            left: 70.8%;
+            color: $dark-gray-color;
+            background-color: $white-color;
+            border-radius:25px;
+            border-style:none;
+            padding: 11px 27px 8px;
+            font-weight:700;
+            font-size: 16px;
+        }
+    }
+    &-links {
+        display: flex;
+        flex-wrap: wrap;
+
+        &-container {
+            margin-right: 104px;
+        }
+        &>div {
+            @include display(flex,column,flex-end,flex-start);
+            font-size: 14px;
+
+            &>* {
+                margin-bottom: 12px;
+            }
+            &>a:last-child {
+                margin: 0;
+            }
+        }
+        &-sub-title {
+            font-size: 18px;
+            font-weight: 700;
+        }
+    }
+    &-copyrights {
+        @include display(flex,row,space-between,flex-start);
+        font-size: 12px;
+
+        &-info {
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        &--powered-by {
+            @include display(flex,column,flex-start,flex-end)
+        }
+    }
+    &-right-section {
+        background-color: $dark-green-background-color;
+        margin-top: 22px;
+        padding: 36px;
+    }
+    &-contact-container {
+        @include display(flex,row,flex-start,flex-start);
+        font-size: 14px;
+    }
+    &-map-icon {
+        margin: 30px 25px 0 0;
+    }
+    &-mobile-icon {
+        margin: 7px 25px 0 0;
+    }
+    &-mail-icon {
+        margin: 10px 25px 0 0;
+    }
+    &-address-info, &-call-info {
+        display: inline;
+        border-bottom: 1.5px solid $light-green-border-color;
+        padding-bottom: 25px;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+    &-address-info {
+        width: 235px;
+    }
+    &-email-info {
+        display: inline;
+        width: 100%;
+        margin-bottom: 36px;
+    }
+    &-contact-sub-title {
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 5px;
+    }
+    &-address, &-mail-id {
+        color: $light-gray-white-color;
+    }
+    &-mobile-number {
+        font-size: 14px;
+        font-weight: 700;
+    }
+    &-follow-us {
+        @include display(flex,row,space-between,flex-start);
+        width: 100%;
+        font-size: 18px;
+
+        &-title {
+            font-size: 18px;
+            font-weight: 900;
+            padding-right: 25px;
+            border-right: 1.5px solid $light-green-border-color;
+        }
+    }
+}
